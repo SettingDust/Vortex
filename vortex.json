@@ -1,0 +1,24 @@
+{
+    "version": "1.3.21",
+    "description": "Vortex is the new, modern mod manager from Nexus Mods",
+    "homepage": "https://www.nexusmods.com/site/mods/1",
+    "license": "GPL v3",
+    "url": "https://github.com/Nexus-Mods/Vortex/releases/download/v1.3.21/vortex-setup-1.3.21.exe#/dl.7z",
+    "hash": "CD7908680E092BB22B05222C67AD92D3BCE6CD954AE6B8CFA69D316C832A47CE",
+    "installer": {
+        "script": [
+            "Expand-7zipArchive (Join-Path $dir '$PLUGINSDIR\\app-64.7z') -DestinationPath $dir",
+            "Remove-Item (Join-Path $dir '$PLUGINSDIR') -Recurse"
+        ]
+    },
+    "shortcuts": [
+        [
+            "vortex.exe",
+            "Vortex"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/Nexus-Mods/Vortex/releases/download/v$version/vortex-setup-$version.exe#/dl.7z"
+    }
+}
